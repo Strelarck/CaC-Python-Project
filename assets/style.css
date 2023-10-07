@@ -1,0 +1,72 @@
+body{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+.background{
+    
+}
+.mainBody{
+    box-sizing: border-box;
+    display: grid;
+     grid-template-columns: 
+     1vw /* 1 */
+     repeat(6, 1fr) /* 2~8 */ 
+     1vw; /* 8 */
+    grid-template-rows: 
+    15vw    /* 1  header*/
+    40vw    /* 2  section1*/
+    40vw    /* 3  section2*/
+    20vw    /* 4  aside1*/
+    45vw    /* 5  section3*/
+    40vw    /* 6 section4*/        
+    23vw;   /* 7 footer */
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+header{
+    display: flex;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.companyName{
+    margin-left: -8vw;
+    margin-top: 6.5vw;
+}
+.logo{
+    box-sizing: border-box;
+    width: 20vw;
+}
+.divider{
+    box-sizing: content-box;
+    background-color: rgba(0, 0, 0, 0.233);
+}
+section{
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: content-box;
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+.dividerImg{
+    width: 100%;
+}
+.aside1{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    position: sticky;
+    top: 0;
+}
+footer{
+    border: 1px solid green;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
