@@ -1,72 +1,663 @@
-body{
-    background-color: rgba(0, 0, 0, 0.76);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Noto+Serif+JP:wght@200&display=swap');
+    body{
+        background-color: rgb(0, 0, 0);
+        overflow-x: hidden;
+        color: white;
+        width: 100%;
+    }
+    .background img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+    }    
+    .bg1{
+        width: 100%;
+        height: 100%;
+        animation: bgFade 25s ease;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    .bg2{
+        width: 100%;
+        height: 100%;
+        animation: bgFade 25s ease;
+        animation-delay: 27s;
+        animation-fill-mode: forwards;
+    }
+    .bg3{
+        width: 100%;
+        height: 100%;
+        animation: bgFade 25s ease;
+        animation-delay: 52s;
+        animation-fill-mode: forwards;
+    }
+    .bg4{
+        width: 100%;
+        height: 100%;
+        animation: bgFade 50s ease;
+        animation-delay: 77s;
+        animation-fill-mode: forwards;
+    }
+    header{
+        margin-top: 1vh;
+        margin-left: 1vh;
+        width: 45vw;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        z-index: 5;
+    }
+    a:-webkit-any-link {
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        margin-right: 5px;
+    }
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 0vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
+    /* /////////////////////// */
+@media only screen and (min-width: 1200px) {
+    .mainBody{
+        position: relative;
+        max-height: 600vh;
+        height: auto;
+        width: 90vw;
+        margin-left: 5vw;
+        box-sizing: border-box;
+        display: grid;
+         grid-template-columns: 
+         3vw /* 1 */
+         repeat(6, 1fr) /* 2~8 */ 
+         3vw; /* 8 */
+        grid-template-rows: 
+        12vw    /* 1  header*/
+        3vw     /* 2  nav */
+        1fr     /* 3  section1*/
+        1fr     /* 4  section2*/
+        1fr     /* 5  aside1*/
+        1fr     /* 6  section3*/
+        1fr;    /* 7  section4*/        
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .mainLogo{
+        animation: logoAnim 1500ms ease-in;
+        animation-fill-mode: forwards;
+        width: 30vw;
+    }
+    nav{
+        background-color: rgba(255, 255, 255, 0.2);
+        font-family: 'Asap', sans-serif;
+        font-size: 1.35vw;
+        display: flex;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: white;
+        line-height: 3vw;        
+        text-decoration: none;
+        z-index: 2;    
+    }
+    nav a{
+        margin-left: 0.5vw;
+    }
+    nav a:hover{
+        color: rgb(154, 72, 161);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+    section{
+        box-sizing: border-box;
+        text-align:justify;
+        box-sizing: content-box;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 8;
+        font-size: 16px;
+        padding: 1vw;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section5{
+        font-size: 1.3vw;
+    }
+    section div{
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: bolder; 
+    }
+    .dividerImg{
+        margin-left: 25%;
+        width: 50%;        
+    }
+    .aside1{
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-left: 1vw;
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        position: sticky;
+        top: 0;
+    }
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 20vw;
+        bottom: 0;
+        right: 0;
+        margin: 0px;
+    }   
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 0vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
 }
-.background{
-    
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .mainBody{
+        position: relative;
+        max-height: 50              0vh;
+        height: auto;
+        width: 90vw;
+        margin-left: 5vw;
+        box-sizing: border-box;
+        display: grid;
+         grid-template-columns: 
+         3vw /* 1 */
+         repeat(6, 1fr) /* 2~8 */ 
+         3vw; /* 8 */
+        grid-template-rows: 
+        12vw    /* 1  header*/
+        3vw     /* 2  nav */
+        1fr     /* 3  section1*/
+        1fr     /* 4  section2*/
+        1fr;       
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .mainLogo{
+        animation: logoAnim 1500ms ease-in-out;
+        animation-fill-mode: forwards;
+        width: 30vw;
+    }
+    nav{
+        background-color: rgba(240, 248, 255, 0.2);
+        font-family: 'Asap', sans-serif;
+        font-size: 1.8vw;
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: white;
+        line-height: 3vw;        
+        text-decoration: none;
+        z-index: 2;        
+    }
+    nav a{
+        margin-left: 1vw;
+    }
+    nav a:hover{
+        color: rgb(154, 72, 161);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+    section{
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        font-size: 16px;
+        padding: 2vw;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section5{
+        font-size: 2vw;
+    }
+    section div{
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: bolder;        
+    }
+    .dividerImg{
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside1{
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        position: sticky;
+        top: 0;
+        margin-left: 1vw;
+    }
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 20vw;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+    }   
+    iframe:hover, iframe:active{
+        margin-bottom: -10px;
+        width: 100%;
+        height: 100%;
+    }
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 0vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
 }
-.mainBody{
-    box-sizing: border-box;
-    display: grid;
-     grid-template-columns: 
-     1vw /* 1 */
-     repeat(6, 1fr) /* 2~8 */ 
-     1vw; /* 8 */
-    grid-template-rows: 
-    15vw    /* 1  header*/
-    40vw    /* 2  section1*/
-    40vw    /* 3  section2*/
-    20vw    /* 4  aside1*/
-    45vw    /* 5  section3*/
-    40vw    /* 6 section4*/        
-    23vw;   /* 7 footer */
-    font-family: 'Nunito', sans-serif;
-    background-color: rgba(255, 255, 255, 0.76);
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .mainBody{
+        position: relative;
+        max-height: 380vh;
+        height: auto;
+        width: 99vw;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+         grid-template-columns: 
+         3vw /* 1 */
+         repeat(6, 1fr) /* 2~8 */ 
+         3vw; /* 8 */
+        grid-template-rows: 
+        15vw    /* 1  header*/
+        3vw     /* 2  nav */
+        1fr     /* 3  section1*/
+        1fr     /* 4  section2*/
+        40vw 
+        50vw;   /* iframe */  
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .mainLogo{
+        animation: logoAnim 1500ms ease-in-out;
+        animation-fill-mode: forwards;
+        width: 45vw;
+        margin-top: -2.5vw;
+    }
+    nav{
+        background-color: rgba(240, 248, 255, 0.2);
+        font-family: 'Asap', sans-serif;
+        font-size: 3vw;
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: white;
+        line-height: 3vw;        
+        text-decoration: none;
+        z-index: 2;        
+    }
+    nav a{
+        margin-left: 2vw;
+    }
+    nav a:hover{
+        color: rgb(154, 72, 161);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+    section{
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        font-size: 16px;
+        padding: 2vw;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section5{
+        font-size: 16px;
+    }
+    section div{
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: bolder;        
+    }
+    .dividerImg{
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside1{
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        position:static;
+        padding: 1vw;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        font-weight: bolder;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 16px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 60vw;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+    }
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 20vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
 }
-header{
-    display: flex;
-    width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 2;
+@media only screen and (min-width: 605px) and (max-width: 765px) {
+    .mainBody{
+        position: relative;
+        max-height: 380vh;
+        height: auto;
+        width: 99vw;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+         grid-template-columns: 
+         3vw /* 1 */
+         repeat(6, 1fr) /* 2~8 */ 
+         3vw; /* 8 */
+        grid-template-rows: 
+        15vw    /* 1  header*/
+        3vw     /* 2  nav */
+        1fr     /* 3  section1*/
+        1fr     /* 4  section2*/
+        40vw 
+        50vw;   /* iframe */  
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .mainLogo{
+        animation: logoAnim 1500ms ease-in-out;
+        animation-fill-mode: forwards;
+        width: 45vw;
+        margin-top: -2.5vw;
+    }
+    nav{
+        background-color: rgba(240, 248, 255, 0.2);
+        font-family: 'Asap', sans-serif;
+        font-size: 2.9vw;
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: white;
+        line-height: 3vw;        
+        text-decoration: none;
+        z-index: 2;        
+    }
+    nav a{
+        margin-top: 1vw;
+        margin-left: 2vw;
+    }
+    nav a:hover{
+        color: rgb(154, 72, 161);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+    section{
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        font-size: 16px;
+        padding: 2vw;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section5{
+        font-size: 16px;
+    }
+    section div{
+        margin-top: 2vw;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: bolder;        
+    }
+    .dividerImg{
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside1{
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        position:static;
+        padding: 1vw;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        font-weight: bolder;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 16px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 60vw;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+    }
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 12vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
 }
-.companyName{
-    margin-left: -8vw;
-    margin-top: 6.5vw;
+@media only screen and (max-width: 600px) {
+    .mainBody{
+        position: relative;
+        max-height: 380vh;
+        height: auto;
+        width: 99vw;
+        padding: 0;
+        box-sizing: border-box;
+        display: grid;
+         grid-template-columns: 
+         3vw /* 1 */
+         repeat(6, 1fr) /* 2~8 */ 
+         3vw; /* 8 */
+        grid-template-rows: 
+        20vw    /* 1  header*/
+        3vw     /* 2  nav */
+        1fr     /* 3  section1*/
+        1fr
+        1fr     /* 4  section2*/
+        50vw
+        50vw 
+        50vw;   /* iframe */  
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+    }
+    .mainLogo{
+        animation: logoAnim 1500ms ease-in-out;
+        animation-fill-mode: forwards;
+        width: 55vw;
+        margin-top: -2.5vw;
+    }
+    nav{
+        background-color: rgba(240, 248, 255, 0.2);
+        font-family: 'Asap', sans-serif;
+        font-size: 2.9vw;
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: white;
+        line-height: 3vw;        
+        text-decoration: none;
+        z-index: 2;        
+    }
+    nav a{
+        margin-top: 1vw;
+        margin-left: 2vw;
+    }
+    nav a:hover{
+        color: rgb(154, 72, 161);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+    section{
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 7;
+        font-size: 10px;
+        padding: 2vw;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .section5{
+        font-size: 16px;
+    }
+    section div{
+        margin-top: 2vw;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: bolder;        
+    }
+    .dividerImg{
+        width: 100%;
+        margin-left: 0;
+    }
+    .aside1{
+        grid-column-start: 2;
+        grid-column-end: 8;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        position:static;
+        padding: 1vw;
+        z-index: 10;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-sizing: border-box;
+        text-align: justify;
+        box-sizing: content-box;
+        font-weight: bolder;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 16px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    iframe{
+        position: absolute;
+        width: 100%;
+        height: 50vw;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+    }
+    @keyframes logoAnim {
+        0%{
+            margin-left: 150vh;
+            filter: blur(20px);
+        }
+        50%{
+            filter: brightness(2) blur(10px);
+        }
+        100%{
+            margin-left: 10vh;
+            filter: brightness(2) blur(0px);
+        }
+    }
 }
-.logo{
-    box-sizing: border-box;
-    width: 20vw;
-}
-.divider{
-    box-sizing: content-box;
-    background-color: rgba(0, 0, 0, 0.233);
-}
-section{
-    box-sizing: border-box;
-    width: 100%;
-    box-sizing: content-box;
+/* ANIMATIONS RELATED */
 
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 6;
-}
-.dividerImg{
-    width: 100%;
-}
-.aside1{
-    grid-column-start: 6;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    position: sticky;
-    top: 0;
-}
-footer{
-    border: 1px solid green;
-    grid-column-start: 2;
-    grid-column-end: 8;
-    grid-row-start: 7;
-    grid-row-end: 8;
+@keyframes bgFade {
+    0%{
+        opacity: 0.3;
+        filter: blur(30px);        
+    }
+    5%{
+        opacity: 1;
+        filter: brightness(2) blur(2px);        
+    }
+    20%{
+        opacity: 1;
+        filter: brightness(1) blur(0px);
+    }
+    60%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 0;
+    }
 }
