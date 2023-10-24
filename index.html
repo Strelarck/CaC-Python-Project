@@ -6,6 +6,7 @@
     <title>Internautas</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.jpg">
+    <script src="assets/scripts/script.js"></script>
 </head>
 <body>
     <div class="mainBody">
@@ -50,7 +51,7 @@
                 La humanidad observó las estrellas desde sus inicios tempranos, y quiso ver en ellas mensa
                 jes ocultos o señales de sus dioses.
                 <br><br>
-                Las estrellas de tamaño más común son estrellas del tamaño del Sol. Después de unos diez
+                Las estrellas de amaño más común son estrellas del tamaño del Sol. Después de unos diez
                 mil millones de años, una vez que se han quedado sin hidrógeno, se convierten lentamente
                 en enanas blancas.
 
@@ -103,9 +104,60 @@
                 </div>
         </section>
         <aside class="aside1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, distinctio laboriosam nam expedita, consequatur ducimus voluptates exercitationem esse unde corrupti placeat qui quam nihil ratione eius natus accusantium excepturi minima?
+            <Fieldset>
+                <legend>DATO CURIOSO</legend>
+                <div class="asteroid">
+                    <p>¿Sabías que...?</p>
+                    Existe un asteroide cerca del planeta tierra <br>
+
+                    con una latitud de: <b> <span id="lat"></span></b> <br>
+
+                    con una longitud de: <b><span id="lon"></span></b> <br>
+                    A una velocidad de: <b><span id="vel"></span> </b> <br>
+                    <b>Pero no te preocupes! <br>
+                    No hay peligro de que choque con nosotros</b>
+                </div>
+            </Fieldset>
+
+
+            <form action="https://formspree.io/f/xknlyzky" method="POST" class="formulario" id="formulario">
+
+                <Fieldset class="contactData">
+                    <legend>Datos de Contacto</legend>
+                    <label>Nombre:
+                        <input type="text" name="Nombre" placeholder="Ingrese su nombre" id="nombre">
+                   </label>
+                   <br>
+                   <label>Apellido:
+                        <input type="text" name="Apellido" placeholder="Ingrese su apellido" id="apellido">
+                    </label>
+                    <br>
+                    <label>Email: &nbsp&nbsp&nbsp
+                        <input type="text" name="Email" placeholder="Ingrese su Email" id="Email">
+                    </label>
+                    <p>Sexo:
+                        <br>
+                        <label>Mujer
+                            <input type="radio" name="sexo" value="M">
+                        </label>
+                        <label>Hombre
+                            <input type="radio" name="sexo" Value="H">
+                        </label>
+                        <br>
+                    </p>
+                    <label>
+                        <textarea name="comentario" class="commentArea" cols="30" rows="5" placeholder="Pon tu opinión aquí"></textarea>
+                    </label>
+                    <br>
+                    <input type="submit" value="Enviar" formtarget="_blank" class="send" onclick="send()">
+                </Fieldset>
+                <br>
+                <br>
+                
+            </form>
             <iframe src="https://eyes.nasa.gov/apps/solar-system/#/home" frameborder="0"></iframe>
         </aside>
+
     </div>
 </body>
 
